@@ -9,9 +9,9 @@ class App {
 
     start() {
         document
-            .querySelector('.sources')
-            .addEventListener('click', (e) => this.controller.getNews(e, (data) => this.view.drawNews(data)));
-        this.controller.getSources((data) => this.view.drawSources(data));
+            .querySelector('.sources')!
+            .addEventListener('click', (e) => this.controller.getNews(e, (data: any) => this.view.drawNews(data)));
+        this.controller.getSources((data: any) => this.view.drawSources(data));
     }
 }
 
